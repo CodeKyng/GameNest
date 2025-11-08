@@ -8,7 +8,7 @@ It features a collection of browser-based mini games — all in one cozy digital
 ## 🌟 Features
 - 🎨 **Modern, responsive UI** using HTML & CSS  
 - ⚡ **Smooth scrolling** and simple interactivity with JavaScript  
-- 🕹️ **10 Featured Game Slots** (you can link or embed your games)  
+- 🕹️ **10 Featured Game Slots** 
 - 🧭 **Sticky navigation bar** and smooth transitions  
 - 💻 **Optimized for desktop and mobile**
 
