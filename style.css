@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0e0e10;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #1a1a1d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+    width: clamp(60px, 8vw, 80px);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4d6d;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: clamp(60px, 10vh, 100px) 20px;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px) brightness(0.8);
+  z-index: -2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 29, 0.4);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #ff4d6d;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+}
+
+.hero button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #ff758f;
+}
+
+/* Games Section */
+.games {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.games h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff4d6d;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: clamp(15px, 2vw, 25px);
+  width: 100%;
+  padding: 0 clamp(10px, 2vw, 20px);
+}
+
+.game-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.game-card img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.game-card p {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff4d6d;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1d;
+  text-align: center;
+  padding: 15px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .games {
+    padding: 40px 20px;
+  }
+
+  .games h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .hero button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
